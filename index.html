@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Denílson Santos" content="">
+
+    <title>Manual WMS Celístics</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Manual WMS Celístics</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <span class="page-scroll" href="#flow"></span>
+                    </li>
+                    <li class="dropdown">                       
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#cadastre">Produto</a></li>
+                            <li><a class="page-scroll" href="#">Armazém</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Edição</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">                       
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recebimento <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#receipt">Nota fiscal de Entrada</a></li>
+                            <li><a class="page-scroll" href="#">Confirmar Recebimento</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Divisão de Produtos</a></li>
+                            <li><a class="page-scroll" href="#">Confirmar Divisão</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Recebimento Reverso</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Consultar Estoque</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">                       
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedido de Venda<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#order">Cadastrar Pedido de Venda</a></li>
+                            <li><a class="page-scroll" href="#">Importar Pedido de Venda</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Gerar Picking List</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Separar Pedido por Fornecimento</a></li>
+                            <li><a class="page-scroll" href="#">Executar Tarefa de Separação</a></li>                      
+                        </ul>
+                    </li>
+                    <li class="dropdown">  
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nota Fiscal Saída <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#output">Cadastrar Nota Fiscal</a></li>
+                            <li><a class="page-scroll" href="#">Importar Nota Fiscal</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#">Processar Nota Fiscal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">  
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movimentação Estoque <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#movement">Transferência de Material</a></li>
+                            <li><a class="page-scroll" href="#">Subcontratação</a></li>
+                            <li><a class="page-scroll" href="#">Reestocagem</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">  
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cancelamento<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="page-scroll" href="#cancellation">Nota Fiscal Recebida</a></li>
+                            <li><a class="page-scroll" href="#">Pedido de Venda</a></li>
+                            <li><a class="page-scroll" href="#">Nota Fiscal Saída</a></li>
+                            <li><a class="page-scroll" href="#">Pedido de Venda Faturado</a></li>
+                            <li><a class="page-scroll" href="#">Nota Fiscal Saída Crossdocking</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <span>
+                        <img  class="img-responsive" width="110%" src="images/APRESENTAÇÃO-WM.png" alt=""></td>
+                    </span>
+                    <div>
+                    <h1>MANUAL WMS CELÍSTICS</h1>
+                    </br>
+                    <p><strong>Olá, seja bem-vindo ao Manual WMS Celístics!</strong></p>
+                    Neste manual, você terá todas as informações necessárias para a utilização do sistema WMS em suas operações.
+                    <p>Você conta também com uma equipe especializada para dar todo suporte em suas operações.</p>
+                    <p>Envie seu feedback, dúvida ou sugestão,
+                    <a href="mailto:suporte_wms-br@celistics.com">clicando aqui.</a></p>
+                    <p>Atenciosamente,</p>
+                    <p>SUPORTE WMS.</p>
+                    </br>
+                    <a class="btn btn-default page-scroll" href="#flow">VAMOS COMEÇAR?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section id="flow" class="flow-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Fluxo</h1>
+                    </br>
+                    <table id="tablefluxo">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a class="page-scroll" href="#receipt" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_03.jpg"  width="255" height="154" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <a href="home.html#_Toc450762279" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_04.jpg" width="156"  height="154" border="0" alt=""></a></td>
+                                <td>
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_05.jpg" width="49"  height="154" alt=""></td>
+                                <td colspan="2">
+                                    <a href="home.html#_TocExecutarreceipt" target="_self">
+                                        <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_06.jpg" width="87"  height="154" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_07.jpg" width="64" height="154" alt=""></td>
+                                <td colspan="2">
+                                    <a href="home.html#_TocDivisao" target="_self">
+                                        <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_08.jpg" width="105"  height="154" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_09.jpg" width="37" height="154" alt=""></td>
+                                <td colspan="2">
+                                    <a href="home.html#_TocConfirmarDivisao" target="_self">
+                                        <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_10.jpg" width="109" height="154" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_11.jpg" width="82" height="154" alt=""></td>
+                                <td colspan="5">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_12.jpg" width="336" height="154" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="154" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="10">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_13.jpg" width="716" height="58" alt=""></td>
+                                <td colspan="11">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_14.jpg" width="564" height="58" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="58" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_15.jpg" width="547" height="68" alt=""></td>
+                                <td colspan="2">
+                                    <a href="home.html#_Toc450762287" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_16.jpg" width="64" height="68" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <a href="home.html#_Toc450762288" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_17.jpg" width="105" height="68" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_18.jpg" width="37" height="68" alt=""></td>
+                                <td>
+                                    <a href="home.html#_Toc450762291" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_19.jpg" width="76" height="68" border="0" alt=""></a></td>
+                                <td>
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_20.jpg" width="33" height="68" alt=""></td>
+                                <td>
+                                    <a href="home.html#_Toc450762292" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_21.jpg" width="68" height="68" border="0" alt=""></a></td>
+                                <td colspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_22.jpg" width="36" height="68" alt=""></td>
+                                <td>
+                                    <a href="home.html#_Toc450762293" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_23.jpg" width="65" height="68" border="0" alt=""></a></td>
+                                <td>
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_24.jpg" width="29" height="68" alt=""></td>
+                                <td>
+                                    <a href="home.html#_Toc450762295" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_25.jpg" width="67" height="68" border="0" alt=""></a></td>
+                                <td>
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_26.jpg" width="153" height="68" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="68" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <a href="home.html#_TocExpedicaoTitulo" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_27.jpg" width="255" height="91" border="0" alt=""></a></td>
+                                <td rowspan="2">
+                                    <a href="home.html#_Toc450762286" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_28.jpg" width="106" height="91" border="0" alt=""></a></td>
+                                <td rowspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_29.jpg" width="50" height="91" alt=""></td>
+                                <td colspan="2" rowspan="2">
+                                    <a href="home.html#_Toc450762286" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_30.jpg" width="124" height="91" border="0" alt=""></a></td>
+                                <td colspan="2" rowspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_31.jpg" width="38" height="91" alt=""></td>
+                                <td colspan="9">
+                                    <a href="home.html#_Toc450762287" target="_self">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_32.jpg" width="371" height="51" alt=""></a></td>
+                                <td colspan="5">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_33.jpg" width="336" height="51" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="51" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2">
+                                    <a href="home.html#_TocSolicitaMovimentoEstoque" target="_self">
+                                        <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_34.jpg" width="126" height="86" border="0" alt=""></a></td>
+                                <td colspan="2" rowspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_35.jpg" width="43" height="86" alt=""></td>
+                                <td colspan="3" rowspan="2">
+                                    <a href="home.html#_TocExecutaMovimentoEstoque" target="_self">
+                                        <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_36.jpg" width="120" height="86" border="0" alt=""></a></td>
+                                <td colspan="7" rowspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_37.jpg" width="418" height="86" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="40" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" rowspan="2">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_38.jpg" width="573" height="85" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="46" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td colspan="14">
+                                    <img src="images/APRESENTACAO-WM-NOVO-MAIO-2016---LINKS_39.jpg" width="707" height="39" alt=""></td>
+                                <td>
+                                    <img src="images/spacer.gif" width="1" height="39" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/spacer.gif" width="255" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="106" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="50" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="49" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="75" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="12" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="26" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="38" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="88" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="17" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="26" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="11" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="76" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="33" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="68" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="14" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="22" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="65" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="29" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="67" height="1" alt=""></td>
+                                <td><img src="images/spacer.gif" width="153" height="1" alt=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cadastre Section -->
+    <section id="cadastre" class="cadastre-section" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-100">
+                    <h2><a name="_Toc450762276">Cadastro Produtodsadsdadasdasdas</a></h2>
+                    <p class=MsoNormal>Para acessar o Cadastro do Produto é necessário acessar as opções <b>Cadastros &gt; Apoio &gt; Produto </b>conforme imagem abaixo. Através da tela o usuário pode cadastrar um novo Produto, Pesquisar ou Editar produtos já cadastrados.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=637 height=113 id="Imagem 1"
+src="files/image010.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Para cadastrar um novo produto basta acionar o botão <b>Novo</b>:</p>
+
+<p class=MsoNormal><img width=636 height=314
+src="files/image011.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>O usuario deve preencher todos os campos basicos. Os campos
+com <span style='color:red'>* </span>são de preenchimento obrigatório.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=597 height=605
+src="files/image012.gif"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal>O campo <b>Tipo Recebimento </b>é carregado de acordo com
+     o Tipo de Material selecionado.É importante ressaltar que a escolha do
+     mesmo irá impactar na executação das tarefas.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:36.0pt'>Ex: Se o tipo de receipt for
+por quantidade, nas tarefas o usuario tera de informar e confirmar a
+quantidade, se for por série o usuario tera que informar os IMEIS nas tarefas. </p>
+
+<p class=MsoNormal>         <img width=410 height=159
+src="files/image013.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:13.5pt;font-family:"Avenir Book",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>O usuario deve preencher os dados de Dimensões da Caixa,
+Dimensões da Unidade do Produto, Estocagem, Caixa, Paletização, Auditoria e
+acionar o botão &gt; <b>Salvar</b>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=631 height=605
+src="files/image014.gif"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:none;border-bottom:solid silver 2.25pt;padding:0cm 0cm 1.0pt 0cm;
+margin-left:35.4pt;margin-right:0cm'>
+
+<h2 style='margin-left:0cm'><a name="_Toc450762277">Edição</a></h2>
+
+</div>
+
+<p class=MsoNormal>O upload das fotos do produdo é feita através da edição do
+mesmo:</p>
+
+<p class=MsoNormal><img width=636 height=120
+src="files/image015.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
+color:black'>O sistema apresentara a tela com os dados para a edição. Para
+adicionar as fotos do produto o usuário deve acionar o botão &gt;<span
+class=apple-converted-space>&nbsp;</span><b>Upload Foto 1 – Principal</b>.</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:13.5pt;font-family:"Tahoma",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><img width=636 height=114
+src="files/image016.jpg"></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:13.5pt;font-family:"Tahoma",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
+color:black'>Na modal<span class=apple-converted-space>&nbsp;</span><b>Upload
+Foto do Produto</b><span class=apple-converted-space>&nbsp;</span>acionar o
+botão &gt;<span class=apple-converted-space>&nbsp;</span><b>Adicionar</b>.</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:13.5pt;font-family:"Tahoma",sans-serif;
+color:black'>&nbsp;</span><img width=295 height=151
+src="files/image017.jpg"></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:13.5pt;font-family:"Tahoma",sans-serif;
+color:black'>&nbsp;</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
+color:black'>Após selecionar uma imagem e fechar a modal, o sistema exibirá a
+imagem no bloco de fotos.</span></p>
+
+<p class=normalventron style='margin:0cm;margin-bottom:.0001pt;text-align:justify;
+background:white'><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
+color:black'>Obs:. O usuário pode adicionar até três imagens do produto.</span></p>
+
+<p class=MsoNormal><img width=636 height=277
+src="files/image018.jpg"></p>
+
+<div style='border:none;border-bottom:solid silver 2.25pt;padding:0cm 0cm 1.0pt 0cm;
+margin-left:35.4pt;margin-right:0cm'>
+
+<h2 style='margin-left:0cm'><a name="_Toc450762278">Cadastro Armazem</a></h2>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Receipt Section -->
+    <section id="receipt" class="receipt-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Recebimento</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Pedido de Venda</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Output Section -->
+    <section id="output" class="output-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Nota Fiscal Saída</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Movement Section -->
+    <section id="movement" class="movement-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Movimentação Estoque</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cancellation Section -->
+    <section id="cancellation" class="cancellation-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Cancelamento</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
