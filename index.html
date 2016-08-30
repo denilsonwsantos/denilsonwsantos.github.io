@@ -101,8 +101,13 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movimentação Estoque <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a class="page-scroll" href="#movement">Transferência de Material</a></li>
-                            <li><a class="page-scroll" href="#">Subcontratação</a></li>
-                            <li><a class="page-scroll" href="#">Reestocagem</a></li>
+                            <li><a class="page-scroll" href="#runtransfer">Executar Tarefa de Transferência</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#subcontratacting">Subcontratação</a></li>
+                            <li><a class="page-scroll" href="#runsubcontratacting">Executar Tarefa de Subcontratação</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="page-scroll" href="#restocking">Reestocagem</a></li>
+                            <li><a class="page-scroll" href="#runrestocking">Confirmar Reestocagem</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">  
@@ -598,7 +603,93 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Movimentação Estoque</h1>
+                	<span class="submenu">
+                		<h2><a>Transferência de Material</a></h2>
+                		<p>Este cenário ocorre quando é necessário movimentar o produto	dentro do estoque, seja pra uma área de picking ou não. Para efetuar tal
+						procedimento o usuário precisa acessar a tela Estoque > Pedidos de Movimentação. </p>
+						<p><img width=636 height=189 src="files/image121.jpg"></p>
+						<p>Acionar o botão Novo:</p>
+						<p><img width=592 height=378 src="files/image122.gif"></p>
+						<p>No pedido de movimentação o usuário deve selecionar o Tipo =	Transferência, informar a Data e Produto, e acionar o botão <b>Pesquisar</b>.</p>
+						<p>Neste momento o sistema valida se existe aquele produto em estoque, caso exista o sistema exibe o mesmo em tela com sua respectiva
+						quantidade no estoque.</p>
+						<p><img width=638 height=416 src="files/image123.gif"></p>
+						<p>O usuário deve selecionar o Depósito e Rack Destino para o qual ele deseja movimentar o produto, após isso deve acionar o botão
+						Movimentar:</p>	
+						<p><img width=636 height=153 src="files/image124.jpg"></p>
+						<p>Quando concluido, o sistema apresenta uma mensagem de sucesso em tela:</p>
+						<p><img width=311 height=85 src="files/image125.jpg"></p>
+                  	</span>
+                  	<div class="submenu" id="runtransfer">
+                  		<h2><a>Executar Tarefa de Transferência</a></h2>
+						<p>Para confirmar a tarefa de transferência o usuário deve acessar <b>Menu > Estoque > Tarefas:</b></p>
+						<p><img width=636 height=190 src="files/image126.jpg"></p>
+						<p>Para consultar a tarefa de transferência de produto, o usuário deve selecionar Tipo: <b>Transferência</b>,
+						preencher os demais filtros que julgar necessário e acionar o botão <b>Pesquisar.</b></p>
+						<p><img width=628 height=397 src="files/image127.gif"></p>
+						<p>Acionar o link <b>Executar Tarefa</b> na coluna <b>Ação.</b></p>
+						<p><img width=636 height=91 src="files/image128.jpg"></p>
+						<p>Para confirmar a transferência, basta o usuário acionar o botão <b>Transferir:</b></p>
+						<p><img width=636 height=262 src="files/image129.jpg"></p>
+						<p><img width=310 height=87 src="files/image130.jpg"></p>
+						<h3>Consultar Estoque</h3>
+						<p>Após a transferência o usuário pode validar se a mesma foi efetuada com sucesso através da tela “Situação de Estoque”.</p>
+						<p><img width=636 height=190 src="files/image131.jpg"></p>
+						<p>Na pesquisa o usuário deve selecionar o armazém e depósito, e acionar o botão <b>Pesquisar</b>:</p>
+						<p><img width=638 height=321 src="files/image132.gif"></p>
+						<p><img width=636 height=107 src="files/image133.jpg"></p>
+						<p>Como podemos confirmar na imagem abaixo, a tranferência foi realizada com sucesso para a posição rack A020101:</p>
+						<p><img width=636 height=311 src="files/image134.jpg"></p>
+                  	</div>
+                  	<div class="submenu" id="subcontratacting">
+                    	<h2><a>Subcontratação</a></h2>
+						<p>Este processo ocorre quando já existente um produto no CD e é necessário fazer uma alteração, classificando parte desses produtos em estoque	com um novo nome/produto.</p>
+						<p>Para efetuar tal procedimento o usuário precisa acessar <b>Estoque > Pedidos de Movimentação</b>:</p>
+						<p><img width=636 height=189 src="files/image135.jpg"></p>
+						<p>Acionar o botão <b>Novo</b> : </p>
+						<p><img width=592 height=378 src="files/image136.gif"></p>
+						<p>No cadastro de pedido de movimentação o usuário deve selecionar o Tipo = SUBCONTRATACAO, informar a Data, Produto, e acionar o botão
+						<b>Pesquisar</b>.</p>
+						<p>Neste momento o sistema valida se existe aquele produto em estoque, caso exista o sistema exibe o mesmo em tela com sua respectiva
+						quantidade no estoque.</p>
+						<p><img width=634 height=416 src="files/image137.gif"></p>
+						<p>O usuário deve selecionar o produto, e informar a quantidade que irá subcontratar, feito isso o mesmo deve acionar o botão “Movimentar”:
+						</p>
+						<p><img width=637 height=172 src="files/image138.jpg"></p>
+						<p><img width=317 height=87	src="files/image139.jpg"></p>
+                    </div>
+                     <div class="submenu" id="runsubcontratacting">
+                    	<h2><a>Executar Tarefa de Subcontratação</a></h2>
+						<p>Para confirmar a tarefa de subcontratação o usuário deve acessar <b>Menu > Estoque > Tarefas:</b></p>
+						<p><img width=636 height=190 src="files/image112.jpg"></p>
+						<p>Para consultar a tarefa de subcontratação do produto, o usuário deve selecionar Tipo: <b>subcontratação</b>, preencher os demais filtros que julgar necessário e acionar o botão > <b>Pesquisar.</b></p>
+						<p><img width=636 height=378 src="files/image140.gif"></p>					
+						<p>Acionar o link > <b>Executar	Tarefa</b> na coluna <b>Ação.</b></p>
+						<p><img width=636 height=89 src="files/image141.jpg"></p>
+						<p>O usuário deve informar o Novo Produto, e acionar o botão <b>Efetuar Subcontratação</b>:</p>
+						<p><img width=636 height=228 src="files/image142.jpg"></p>
+						<p><img width=314 height=93 src="files/image143.jpg"></p>
+						<h3>Consultar Estoque</h3>
+						<p>Após a Subcontratação o usuário pode validar se a mesma foi efetuada	com sucesso através da tela “Situação de Estoque”.</p>
+						<p><img width=636 height=190 src="files/image144.jpg"></p>
+						<p>O usuario deve preencher o Armazém, Depósito e demais filtros que julgar necessario e após isto acionar o botão <b>Pesquisar</b>:</p>
+						<p>Como podemos confirmar o produto que foi subcontratado já consta no estoque.</p>
+						<p><img width=645 height=321 src="files/image145.gif"></p>
+						<p><img width=636 height=108 src="files/image146.jpg"></p>
+						<p><img width=636 height=311 src="files/image147.jpg"></p>
+                    </div>
+                    <div class="submenu" id="restocking">
+                    	<h2><a>Reestocagem</a></h2>
+						<p>Para que este processo seja possível é necessário que a filial de origem (RJ) já esteja configurada com a filial de reestocagem(ES) e
+						cliente para entrega. O cliente para Entrega é o que determinara se o Pedido é de reestocagem.</p>
+						<p><img width=636 height=186 src="files/image148.jpg"></p>
+				    </div>
+                    <div class="submenu" id="runrestocking">
+                    	<h2><a>Confirmar Reestocagem</a></h2>
+                    	AHHUAHUAUHAHUHUAHUAUHA
+                    </div>
+
+
                 </div>
             </div>
         </div>
