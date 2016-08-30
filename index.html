@@ -92,9 +92,9 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nota Fiscal Saída <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a class="page-scroll" href="#output">Cadastrar Nota Fiscal</a></li>
-                            <li><a class="page-scroll" href="#">Importar Nota Fiscal</a></li>
+                            <li><a class="page-scroll" href="#importnote">Importar Nota Fiscal</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a class="page-scroll" href="#">Processar Nota Fiscal</a></li>
+                            <li><a class="page-scroll" href="#processnote">Processar Nota Fiscal</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">  
@@ -478,7 +478,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                	<span class="submenu" id="ticket">
+                	<span class="submenu">
                     	<h2><a>Cadastrar Pedido de Venda</a></h2>
                     	<p>Para acessar a tela de Cadastro de Pedido de Venda o usuário	deve acessar <b>Comercial > Pedido de Venda, </b>através desta tela o mesmo pode pesquisar ou cadastrar um novo pedido:</p>						
 						<p><img width=636 height=90 src="files/image149.jpg"></p>
@@ -544,6 +544,8 @@
 						<p><img width=647 height=359 src="files/image175.gif"></p>
 						<p><img width=316 height=92 src="files/image176.jpg"></p>
                     </div>
+                      
+                    </div>
                 </div>
             </div>
         </div>
@@ -554,8 +556,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Nota Fiscal Saída</h1>
-                </div>
+                	<span class="submenu">
+                		<h2><a>Nota Fiscal Saída</a></h2>
+                		<p>É importante que antes de importar a Nota Fiscal de saída o usuário valide se o pedido está pronto para faturamento, para isto o mesmo deve acessar <b>Estoque > Saída > Pedidos Prontos para Faturamento.</b></p>
+						<p><img width=636 height=190 src="files/image186.jpg"></p>
+						<p>Conforme podemos ver na imagem abaixo o pedido já está com status pronto para faturar, logo o usuário pode prosseguir com a importação da nota fiscal de saída.</p>
+						<p><img width=639 height=510 src="files/image187.gif"></p>
+                	</span>
+                	 <div class="submenu" id="importnote">
+                    	<h2><a>Importar Pedido de Venda</a></h2>
+						<p>Para importar a Nota Fiscal de Saída, o usuário deve retornar a tela Gerenciar Pallet, para acessa-la basta selecionar no menu <b>Fiscal > Gerenciar Pallet. </b>Para efetuar a pesquisa o usuário deve preencher os
+						campos que julgar necessário e acionar o botão <b>Pesquisar</b>:</p>
+						<p><img width=636 height=233 src="files/image188.jpg"></p>
+						<p>Quando o sistema carregar o Pallet no grid, basta o usuario acionar o botão <b>Importar Notas Fiscais de Saida</b>:</p>
+						<p><img width=636 height=165 src="files/image189.jpg"></p>
+						<p>Na tela de importação existe um arquivo de exemplo a qual auxiliara o usuário no preenchimento dos dados a serem importados.</p>
+						<p><img width=637 height=201 src="files/image190.jpg"></p>
+						<p>Após preencher o arquivo, é necessario que o usuario importe o mesmo no sistema, para isto o mesmo deve selecionar o arquivo através do botão “<b>Escolher arquivo...”</b> e após isto acionar o botão <b>Importar</b>:</p>
+						<p><img width=636 height=200 src="files/image191.jpg"></p>
+						<p>Após concluir a importação, o sistema exibe as Notas Fiscais que foram importadas com sucesso ou insucesso:</p>
+						<p><img width=642 height=359 src="files/image192.gif"></p>
+                    </div>
+                    <div class="submenu" id="processnote">
+                    	<h2><a>Processar Nota Fiscal</a></h2>
+						<p>Após todo o processo de reestocagem é importante que o usuário valide se o mesmo ocorreu com sucesso, para isto é necessário que o usuário confirme se a Nota Fiscal que saiu do CD do Rio de janeiro já consta no CD de
+						reestocagem(ES).</p>
+						<p>Para conseguir consultar tal informação o usuário precisa estar configurado com a Filial ES:</p>
+						<p><img width=636 height=53	src="files/image193.jpg"></p>
+						<p>O mesmo deve acessar a tela <b>Estoque > Recebimento > Notas Fiscais Recebidas</b>:</p>
+						<p><img width=637 height=190 src="files/image194.jpg"></p>
+						<p>O usuario deve preencher o numero da NF, e acionar o botão <b>Pesquisar</b>.	Como podemos ver na imagem abaixo o processo foi efetuada com sucesso, pois a NF 303030 já consta na filial do Espirito Santo.</p>
+						<p><img width=643 height=454 src="files/image195.gif"></p>
+					</div>
+				</div>				
             </div>
         </div>
     </section>
