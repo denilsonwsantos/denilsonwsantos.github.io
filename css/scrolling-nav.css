@@ -56,9 +56,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .order-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
+    padding-top: 50px;
     background: #fff;
 }
 .output-section {
@@ -101,4 +99,7 @@ of those sections to manage the look and feel of the site. */
 }
 img{
     border: 1px solid #dbdbdb;
+}
+td img{
+    border: 0;
 }
